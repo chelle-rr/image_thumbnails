@@ -22,7 +22,7 @@ if [[ -z ${image_list[@]} ]]; then
     exit 1
 fi
 
-# For each item in the video_list, create a thumbnail
+# For each item in the image_list, create a thumbnail
 for image_file in $image_list
 do
     # Get the directory of the video file
@@ -62,11 +62,11 @@ fi
 # Create contact sheets
 montage -label '%t' -font Helvetica -pointsize 10 -size 200x200 @$image_dir/thumb_list.txt -geometry 280x190 -tile "$num_columns"x $image_dir/contactsheet.png
 
-# Check if thumbnails.png was successfully created
+# Check if contact sheet was successfully created
 if test -f $image_dir/contactsheet.png; then
 	echo "Contact sheet successfully created"
 else
-	echo "Error in creating thumbnails.png"
+	echo "Error in creating contact sheet"
 fi
 
 # Remove that no-longer-needed list
