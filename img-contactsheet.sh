@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+# set -x
 
 # Directory containing images
 read -p "Enter the directory: " image_dir
