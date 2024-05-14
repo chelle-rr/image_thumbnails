@@ -60,11 +60,11 @@ else
 fi
 
 # Create contact sheets
-montage -label '%t' -font Helvetica -pointsize 10 -size 200x200 @$image_dir/thumb_list.txt -geometry 280x190 -frame 5 -tile "$num_columns"x $image_dir/contactsheet.png
+montage -label '%t' -font Helvetica -pointsize 10 -size 200x200 @$image_dir/thumb_list.txt -geometry 280x190 -tile "$num_columns"x $image_dir/contactsheet.png
 
 # Check if thumbnails.png was successfully created
 if test -f $image_dir/contactsheet.png; then
-	echo "Thumbnails.png successfully created"
+	echo "Contact sheet successfully created"
 else
 	echo "Error in creating thumbnails.png"
 fi
