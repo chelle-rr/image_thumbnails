@@ -6,7 +6,8 @@
 read -p "Enter the directory: " image_dir
 
 # Check for whitespace; if found, exit and alert
-if [[ -n $(find "$image_dir" -name "* *") ]]; then
+whitespace=`find "$video_dir" -name "* *"`
+if [[ -n ${whitespace[@]} ]]; then
 	echo -ne "Whitespace found in file or directory name. Please fix before proceeding:\n$whitespace"
 	exit 1
 fi
