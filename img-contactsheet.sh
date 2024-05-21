@@ -6,7 +6,7 @@
 read -p "Enter the directory: " image_dir
 
 # Check for whitespace; if found, exit and alert
-whitespace=`find "$video_dir" -name "* *"`
+whitespace=`find "$image_dir" -name "* *"`
 if [[ -n ${whitespace[@]} ]]; then
 	echo -ne "Whitespace found in file or directory name. Please fix before proceeding:\n$whitespace"
 	exit 1
@@ -17,7 +17,7 @@ fi
 # Find all photo files recursively in the directory and put them in an array
 image_list=`find "$image_dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.tif" -o -iname "*.tiff" -o -iname "*.cr2" -o -iname "*.dng" -o -iname "*.gif" -o -iname "*.heic" -o -iname "*.nef" -o -iname "*.png" -o -iname "*.psd" -o -iname "*.arw" \)`
 
-# If no video files found, exit and alert
+# If no photo files found, exit and alert
 if [[ -z ${image_list[@]} ]]; then
     echo "No images found"
     exit 1
