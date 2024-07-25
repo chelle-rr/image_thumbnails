@@ -1,4 +1,4 @@
-# image_contact_sheets
+# image_thumbnails
 
 Dependencies:<br>
 ffmpeg https://www.ffmpeg.org/<br>
